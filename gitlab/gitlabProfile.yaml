@@ -1,0 +1,15 @@
+name: gitlab-proxy
+description: GitLab proxy devices for LXD
+devices:
+  gitlab-http:
+    connect: tcp:127.0.0.1:80
+    listen: tcp:0.0.0.0:80
+    type: proxy
+  gitlab-https:
+    connect: tcp:127.0.0.1:443
+    listen: tcp:0.0.0.0:443
+    type: proxy
+  gitlab-ssh:
+    connect: tcp:127.0.0.1:2222
+    listen: tcp:0.0.0.0:2222
+    type: proxy
